@@ -1,22 +1,22 @@
-# 🎓 The Refactoring Swarm
+#  The Refactoring Swarm
 
 A multi-agent system for autonomous software maintenance, built as part of the IGL Lab (2025-2026).
 
-## 📋 Project Description
+## Project Description
 
 This project implements an autonomous agent architecture capable of performing software maintenance without human intervention. The system takes a folder containing "badly made" Python code (buggy, undocumented, untested) and delivers a clean, functional version validated by tests.
 
-## 🏗️ System Architecture
+## System Architecture
 
 The system orchestrates collaboration between 3 specialized agents:
 
-1. **The Auditor** 🔍: Reads the code, runs static analysis (pylint) and produces a refactoring plan.
-2. **The Fixer** 🔧: Reads the plan, modifies the code file by file to correct errors.
-3. **The Judge** ⚖️: Executes unit tests (pytest).
+1. **The Auditor** : Reads the code, runs static analysis (pylint) and produces a refactoring plan.
+2. **The Fixer** : Reads the plan, modifies the code file by file to correct errors.
+3. **The Judge** : Executes unit tests (pytest).
    - If unsuccessful: Sends the code back to the Fixer with error logs (Self-Healing Loop)
    - If successful: Confirms the end of the mission
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 tpigl/
@@ -67,7 +67,7 @@ tpigl/
         └── .gitkeep
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Setup Environment
 
@@ -108,7 +108,7 @@ python check_setup.py
 python main.py --target_dir ./sandbox
 ```
 
-## 📊 CLI Arguments
+##  CLI Arguments
 
 | Argument | Description | Default |
 |----------|-------------|---------|
@@ -116,7 +116,7 @@ python main.py --target_dir ./sandbox
 | `--max_iterations` | Maximum self-healing loop iterations | 10 |
 | `--verbose` | Enable verbose logging | False |
 
-## 📈 Evaluation Criteria
+##  Evaluation Criteria
 
 | Dimension | Weight | Criteria |
 |-----------|--------|----------|
@@ -124,13 +124,13 @@ python main.py --target_dir ./sandbox
 | Technical Robustness | 30% | No crashes, no infinite loops, CLI compliance |
 | Data Quality | 30% | Valid experiment_data.json with complete history |
 
-## 👥 Team Roles
+##  Team Roles
 
-1. **Orchestrator (Lead Dev)** 🧠 - Designs execution graph, manages workflow
-2. **Toolsmith** 🛠️ - Develops agent tools, implements security
-3. **Prompt Engineer** 💬 - Writes and optimizes prompts
-4. **Quality & Data Manager** 📊 - Manages telemetry and logging
+1. **Orchestrator (Lead Dev)**  - Designs execution graph, manages workflow
+2. **Toolsmith**  - Develops agent tools, implements security
+3. **Prompt Engineer**  - Writes and optimizes prompts
+4. **Quality & Data Manager**  - Manages telemetry and logging
 
-## 📜 License
+##  License
 
 This project is for educational purposes as part of the IGL Module at the National School of Computer Science.
