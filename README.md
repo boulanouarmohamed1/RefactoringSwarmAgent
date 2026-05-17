@@ -1,6 +1,6 @@
 #  The Refactoring Swarm
 
-A multi-agent system for autonomous software maintenance, built as part of the IGL Lab (2025-2026).
+A multi-agent system for autonomous software maintenance.
 
 ## Project Description
 
